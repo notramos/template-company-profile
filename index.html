@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NexaFlow - Digital Innovation Studio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Floating Navigation -->
+    <nav class="floating-nav" id="floatingNav">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">NexaFlow</span>
+        </div>
+        <div class="nav-menu">
+          <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+          <a href="#about" class="nav-link" data-section="about">Story</a>
+          <a href="#services" class="nav-link" data-section="services">Magic</a>
+          <a href="#team" class="nav-link" data-section="team">Humans</a>
+          <a href="#contact" class="nav-link" data-section="contact">Connect</a>
+        </div>
+        <div class="theme-toggle" onclick="toggleTheme()">
+          <i class="fas fa-moon"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Particle Background -->
+    <div class="particles-container" id="particles"></div>
+
+    <!-- Hero Section dengan Text Typewriter -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for new projects
+        </div>
+        <h1 class="hero-title">
+          We craft
+          <span class="typewriter" id="typewriter"></span>
+          <span class="cursor">|</span>
+        </h1>
+        <p class="hero-subtitle">
+          Digital experiences that don't just look good—they feel alive. We're
+          obsessed with the details that make users say "wow."
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="scrollToSection('contact')">
+            <span>Start Your Journey</span>
+            <i class="fas fa-rocket"></i>
+          </button>
+          <button class="btn-secondary" onclick="scrollToSection('about')">
+            <i class="fas fa-play"></i>
+            <span>Our Story</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Animated Statistics -->
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-number" data-target="127">0</div>
+          <div class="stat-label">Projects Delivered</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="94">0</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Awards Won</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section dengan Timeline -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Journey</span>
+          <h2>From Crazy Idea to Digital Reality</h2>
+          <p>Every pixel tells a story. Here's ours.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item" data-year="2019">
+            <div class="timeline-content">
+              <h3>The Spark</h3>
+              <p>
+                Started in a coffee shop with just a laptop and infinite dreams
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item" data-year="2021">
+            <div class="timeline-content">
+              <h3>First Breakthrough</h3>
+              <p>
+                Launched our revolutionary design system that changed everything
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item" data-year="2023">
+            <div class="timeline-content">
+              <h3>Global Recognition</h3>
+              <p>
+                Featured in top design publications and won international awards
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item" data-year="2024">
+            <div class="timeline-content">
+              <h3>The Future</h3>
+              <p>Building tomorrow's digital experiences, today</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services dengan Interactive Cards -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What We Do</span>
+          <h2>We Don't Just Build, We Innovate</h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card" data-service="web">
+            <div class="service-icon">
+              <i class="fas fa-code"></i>
+            </div>
+            <h3>Web Development</h3>
+            <p>Blazing fast websites that convert visitors into customers</p>
+            <div class="service-tags">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>PWA</span>
+            </div>
+            <div class="service-overlay">
+              <div class="overlay-content">
+                <h4>Recent Projects:</h4>
+                <ul>
+                  <li>E-commerce platform - 300% conversion boost</li>
+                  <li>SaaS dashboard - 50% better UX scores</li>
+                  <li>Portfolio site - Featured on Awwwards</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="mobile">
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Mobile Apps</h3>
+            <p>
+              Apps so smooth, your users will never want to put their phones
+              down
+            </p>
+            <div class="service-tags">
+              <span>React Native</span>
+              <span>Flutter</span>
+              <span>iOS</span>
+            </div>
+            <div class="service-overlay">
+              <div class="overlay-content">
+                <h4>Success Stories:</h4>
+                <ul>
+                  <li>Fitness app - 1M+ downloads</li>
+                  <li>Food delivery - #1 in App Store</li>
+                  <li>Social platform - 4.9★ rating</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="design">
+            <div class="service-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>Designs that don't just look pretty—they solve real problems</p>
+            <div class="service-tags">
+              <span>Figma</span>
+              <span>Prototyping</span>
+              <span>Research</span>
+            </div>
+            <div class="service-overlay">
+              <div class="overlay-content">
+                <h4>Design Philosophy:</h4>
+                <ul>
+                  <li>User-first approach</li>
+                  <li>Accessibility is non-negotiable</li>
+                  <li>Beautiful simplicity</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="ai">
+            <div class="service-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>AI Integration</h3>
+            <p>
+              Smart solutions that make your business work smarter, not harder
+            </p>
+            <div class="service-tags">
+              <span>Machine Learning</span>
+              <span>ChatBots</span>
+              <span>Automation</span>
+            </div>
+            <div class="service-overlay">
+              <div class="overlay-content">
+                <h4>AI Solutions:</h4>
+                <ul>
+                  <li>Custom chatbots</li>
+                  <li>Predictive analytics</li>
+                  <li>Process automation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section dengan Hover Effects -->
+    <section class="team" id="team">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Meet The Minds</span>
+          <h2>The Humans Behind The Magic</h2>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-image">
+              <div class="avatar">👨‍💻</div>
+              <div class="member-overlay">
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+            <h3>Alex Rodriguez</h3>
+            <p class="member-role">Creative Director</p>
+            <p class="member-bio">
+              "I believe every pixel has a purpose, every animation tells a
+              story."
+            </p>
+          </div>
+
+          <div class="team-member">
+            <div class="member-image">
+              <div class="avatar">👩‍💻</div>
+              <div class="member-overlay">
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-dribbble"></i></a>
+                </div>
+              </div>
+            </div>
+            <h3>Sarah Chen</h3>
+            <p class="member-role">Lead Developer</p>
+            <p class="member-bio">
+              "Code is poetry, and I write symphonies that change the world."
+            </p>
+          </div>
+
+          <div class="team-member">
+            <div class="member-image">
+              <div class="avatar">👨‍🎨</div>
+              <div class="member-overlay">
+                <div class="social-links">
+                  <a href="#"><i class="fab fa-linkedin"></i></a>
+                  <a href="#"><i class="fab fa-behance"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <h3>Marcus Johnson</h3>
+            <p class="member-role">UX Strategist</p>
+            <p class="member-bio">
+              "User experience isn't just what we do—it's how we think about
+              everything."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section dengan Interactive Form -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-content">
+          <div class="contact-info">
+            <span class="section-tag">Let's Talk</span>
+            <h2>Ready to Create Something Amazing?</h2>
+            <p>
+              We're always excited to work on new projects. Drop us a line and
+              let's make magic happen.
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email Us</h4>
+                  <p>hello@nexaflow.com</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h4>Call Us</h4>
+                  <p>+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Visit Us</h4>
+                  <p>San Francisco, CA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" required />
+              <label for="name">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" required />
+              <label for="email">Email Address</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="project" required />
+              <label for="project">Project Type</label>
+            </div>
+            <div class="form-group">
+              <textarea id="message" required></textarea>
+              <label for="message">Tell us about your project</label>
+            </div>
+            <button type="submit" class="btn-primary">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">
+              <span class="logo-icon">⚡</span>
+              <span class="logo-text">NexaFlow</span>
+            </div>
+            <p>Crafting digital experiences that inspire and innovate.</p>
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h4>Services</h4>
+              <a href="#">Web Development</a>
+              <a href="#">Mobile Apps</a>
+              <a href="#">UI/UX Design</a>
+              <a href="#">AI Integration</a>
+            </div>
+            <div class="footer-column">
+              <h4>Company</h4>
+              <a href="#">About Us</a>
+              <a href="#">Our Team</a>
+              <a href="#">Careers</a>
+              <a href="#">Blog</a>
+            </div>
+            <div class="footer-column">
+              <h4>Connect</h4>
+              <a href="#">Twitter</a>
+              <a href="#">LinkedIn</a>
+              <a href="#">GitHub</a>
+              <a href="#">Dribbble</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 NexaFlow. All rights reserved.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("scroll", () => {
+        document.querySelectorAll("section").forEach((sec) => {
+          const rect = sec.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            sec.classList.add("animate-in");
+          }
+        });
+      });
+      // Typewriter Effect
+      const words = [
+        "digital experiences",
+        "beautiful websites",
+        "mobile apps",
+        "user interfaces",
+        "the future",
+      ];
+      let wordIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      const typewriterElement = document.getElementById("typewriter");
+
+      function typeWriter() {
+        const currentWord = words[wordIndex];
+
+        if (isDeleting) {
+          typewriterElement.textContent = currentWord.substring(
+            0,
+            charIndex - 1
+          );
+          charIndex--;
+          if (charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+          }
+        } else {
+          typewriterElement.textContent = currentWord.substring(
+            0,
+            charIndex + 1
+          );
+          charIndex++;
+          if (charIndex === currentWord.length) {
+            isDeleting = true;
+            setTimeout(typeWriter, 2000);
+            return;
+          }
+        }
+
+        setTimeout(typeWriter, isDeleting ? 50 : 100);
+      }
+
+      // Animated Counter
+      function animateCounter(element) {
+        const target = parseInt(element.dataset.target);
+        let current = 0;
+        const increment = target / 50;
+
+        const updateCounter = () => {
+          current += increment;
+          if (current < target) {
+            element.textContent = Math.floor(current);
+            requestAnimationFrame(updateCounter);
+          } else {
+            element.textContent = target;
+          }
+        };
+
+        updateCounter();
+      }
+
+      // Particle Background
+      function createParticles() {
+        const particlesContainer = document.getElementById("particles");
+        const particleCount = 50;
+
+        for (let i = 0; i < particleCount; i++) {
+          const particle = document.createElement("div");
+          particle.className = "particle";
+          particle.style.left = Math.random() * 100 + "%";
+          particle.style.top = Math.random() * 100 + "%";
+          particle.style.animationDelay = Math.random() * 20 + "s";
+          particle.style.animationDuration = Math.random() * 10 + 10 + "s";
+          particlesContainer.appendChild(particle);
+        }
+      }
+
+      // Smooth Scrolling
+      function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Navigation Active State
+      function updateActiveNav() {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        let currentSection = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (window.scrollY >= sectionTop - 100) {
+            currentSection = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("data-section") === currentSection) {
+            link.classList.add("active");
+          }
+        });
+      }
+
+      // Theme Toggle
+      function toggleTheme() {
+        document.body.classList.toggle("dark-theme");
+        const icon = document.querySelector(".theme-toggle i");
+        icon.classList.toggle("fa-moon");
+        icon.classList.toggle("fa-sun");
+      }
+
+      // Form Floating Labels
+      function setupFloatingLabels() {
+        const inputs = document.querySelectorAll(
+          ".contact-form input, .contact-form textarea"
+        );
+
+        inputs.forEach((input) => {
+          input.addEventListener("focus", () => {
+            input.parentElement.classList.add("focused");
+          });
+
+          input.addEventListener("blur", () => {
+            if (input.value === "") {
+              input.parentElement.classList.remove("focused");
+            }
+          });
+        });
+      }
+
+      // Form Submission
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const button = this.querySelector('button[type="submit"]');
+          const originalText = button.innerHTML;
+
+          button.innerHTML =
+            '<i class="fas fa-spinner fa-spin"></i> Sending...';
+          button.disabled = true;
+
+          setTimeout(() => {
+            button.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+            setTimeout(() => {
+              button.innerHTML = originalText;
+              button.disabled = false;
+              this.reset();
+            }, 2000);
+          }, 2000);
+        });
+
+      // Intersection Observer for Animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-in");
+
+            // Trigger counter animation for stats
+            if (entry.target.classList.contains("hero-stats")) {
+              const counters = entry.target.querySelectorAll(".stat-number");
+              counters.forEach((counter) => animateCounter(counter));
+            }
+          }
+        });
+      }, observerOptions);
+
+      // Initialize everything when DOM is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        // Tampilkan hero section secara langsung saat halaman dimuat
+        document.querySelector(".hero").classList.add("animate-in");
+        const heroStats = document.querySelector(".hero-stats");
+        if (heroStats) {
+          const counters = heroStats.querySelectorAll(".stat-number");
+          counters.forEach((counter) => animateCounter(counter));
+        }
+        typeWriter();
+        createParticles();
+        setupFloatingLabels();
+
+        // Observe elements for animations
+        // Tambahkan .hero ke daftar yang diamati
+        // Observer hanya untuk elemen yang perlu animasi saat scroll
+        const elementsToAnimate = document.querySelectorAll(
+          ".about, .services, .team, .contact"
+        );
+        // Fungsi untuk memeriksa apakah elemen sudah di viewport saat load
+
+        // Navigation scroll listener
+        window.addEventListener("scroll", updateActiveNav);
+
+        // Nav link click handlers
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href").substring(1);
+            scrollToSection(targetId);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
